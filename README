@@ -1,0 +1,27 @@
+why:
+  I needed a quick way to convert mkv files to mp4 so that I can play them on my
+  roku box.  Handbrake and others don't allow a passthrough option (re-encoding)
+  x264 video... into... h264 video and needlessly taking up time (30 minutes or
+  so).
+
+  I timed this script against a typical 720p 23 minute clip.. it runs in 1
+  minute 10 seconds on my machine (mid 2009 macbook pro 3.06ghz 8gb ram)
+
+assumptions:
+  you have an mkv file containing x264 video, and ac3 audio
+  your framerate is 23.976
+
+requires:
+  mkvtoolnix http://www.bunkus.org/videotools/mkvtoolnix/
+  a52dec http://liba52.sourceforge.net/
+  faac http://www.audiocoding.com/faac.html
+  MP4Box http://gpac.sourceforge.net/index.php
+
+usage:
+  ./convert file.mkv
+  outputs file.mp4
+
+
+future enhancements:
+  *do not assume framerate (mediainfo/mkvinfo to detect actual correct frames)
+  *test against more mkv files, make it handle them too ?
