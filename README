@@ -16,12 +16,8 @@ requires:
   a52dec http://liba52.sourceforge.net/
   faac http://www.audiocoding.com/faac.html
   MP4Box http://gpac.sourceforge.net/index.php
+  mediainfo cli version http://mediainfo.sourceforge.net/en
 
 usage:
   ./convert file.mkv
   outputs file.mp4
-
-
-future enhancements:
-  *do not assume framerate (mediainfo/mkvinfo to detect actual correct frames)
-  *test against more mkv files, make it handle them too ?
